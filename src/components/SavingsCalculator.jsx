@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { DollarSign, TrendingDown, PiggyBank } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const SavingsCalculator = () => {
   const [bill, setBill] = useState(200);
@@ -104,12 +105,12 @@ const SavingsCalculator = () => {
                 </AnimatePresence>
 
                 <div className="pt-4">
-                  <a
-                    href="#contact"
+                  <Link
+                    to="/contact"
                     className="block w-full bg-accent hover:bg-amber-500 text-primary font-bold text-center py-4 rounded-xl transition-all shadow-lg"
                   >
                     Lock In These Savings
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

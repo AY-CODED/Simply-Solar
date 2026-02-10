@@ -1,26 +1,26 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import SavingsCalculator from './components/SavingsCalculator';
-import LeadForm from './components/LeadForm';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import ServicesPage from './pages/ServicesPage';
+import CalculatorPage from './pages/CalculatorPage';
+import FAQPage from './pages/FAQPage';
+import ContactPage from './pages/ContactPage';
 
-const App = () => {
+function App() {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main>
-        <Hero />
-        <Services />
-        <SavingsCalculator />
-        <FAQ />
-        <LeadForm />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="services" element={<ServicesPage />} />
+          <Route path="calculator" element={<CalculatorPage />} />
+          <Route path="faq" element={<FAQPage />} />
+          <Route path="contact" element={<ContactPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;

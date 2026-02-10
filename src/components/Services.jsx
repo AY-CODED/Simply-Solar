@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Home, Building2, Wrench } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -75,13 +76,13 @@ const Services = () => {
                 <p className="text-slate-600 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                <a
-                  href="#contact"
+                <Link
+                  to="/services"
                   className="text-primary font-bold flex items-center gap-2 group/link"
                 >
                   Learn More
                   <span className="group-hover/link:translate-x-1 transition-transform">→</span>
-                </a>
+                </Link>
               </div>
             </motion.div>
           ))}
