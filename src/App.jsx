@@ -1,19 +1,26 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './layout/Layout';
-
-
+import React from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Services from './components/Services';
+import SavingsCalculator from './components/SavingsCalculator';
+import LeadForm from './components/LeadForm';
+import FAQ from './components/FAQ';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <>
-     <BrowserRouter>
-      <Routes>
-        <Route element={<Layout />} />
-       
-      </Routes>
-    </BrowserRouter>
-    </>
+    <div className="min-h-screen">
+      <Navbar />
+      <main>
+        <Hero />
+        <Services />
+        <SavingsCalculator />
+        <FAQ />
+        <LeadForm />
+      </main>
+      <Footer />
+    </div>
   );
-}
+};
 
 export default App;
