@@ -31,7 +31,7 @@ const SavingsCalculator = () => {
                 <div>
                   <div className="flex justify-between items-end mb-4">
                     <label className="text-sm font-bold uppercase tracking-wider text-slate-400">
-                      Average Monthly Bill
+                      Average Monthly Bill (NGN)
                     </label>
                     <span className="text-4xl font-extrabold text-primary">₦{bill.toLocaleString()}</span>
                   </div>
@@ -73,7 +73,7 @@ const SavingsCalculator = () => {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
                   >
-                    <p className="text-blue-200 uppercase tracking-widest text-sm font-bold mb-2">Estimated Annual Savings</p>
+                    <p className="text-blue-200 uppercase tracking-widest text-sm font-bold mb-2">Estimated Annual Savings (NGN)</p>
                     <div className="flex items-start">
                       <span className="text-2xl mt-1 mr-1 font-bold text-accent">₦</span>
                       <span className="text-6xl md:text-7xl font-extrabold">{annualSavings.toLocaleString()}</span>

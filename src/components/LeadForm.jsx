@@ -145,7 +145,7 @@ const LeadForm = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className={`w-full px-4 py-3 rounded-xl border ${errors.phone ? 'border-red-500' : 'border-slate-200'} focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all`}
-                    placeholder="1234567890"
+                    placeholder="0803 123 4567"
                   />
                   {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                 </div>
