@@ -37,8 +37,8 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-xl mb-1">Phone</h4>
-                    <p className="text-slate-300">(800) SUN-POWR</p>
-                    <p className="text-slate-300">(555) 123-4567</p>
+                    <p className="text-slate-300">+234 (0) 800 SOLAR NG</p>
+                    <p className="text-slate-300">+234 123 456 7890</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -47,8 +47,8 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-xl mb-1">Email</h4>
-                    <p className="text-slate-300">hello@simplysolar.com</p>
-                    <p className="text-slate-300">support@simplysolar.com</p>
+                    <p className="text-slate-300">hello@simplysolar.com.ng</p>
+                    <p className="text-slate-300">support@simplysolar.com.ng</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -57,8 +57,8 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-xl mb-1">Office</h4>
-                    <p className="text-slate-300">123 Energy Lane</p>
-                    <p className="text-slate-300">Sunshine Valley, CA 90210</p>
+                    <p className="text-slate-300">45 Victoria Island</p>
+                    <p className="text-slate-300">Lagos, Nigeria</p>
                   </div>
                 </div>
               </div>

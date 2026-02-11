@@ -51,15 +51,15 @@ const Footer = () => {
             <ul className="space-y-4 text-blue-100">
               <li className="flex items-start gap-3">
                 <MapPin className="text-accent shrink-0" size={20} />
-                <span>123 Solar Way, Sunshine City, SC 12345</span>
+                <span>45 Victoria Island, Lagos, Nigeria</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-accent shrink-0" size={20} />
-                <span>(555) 123-4567</span>
+                <span>+234 (0) 800 SOLAR NG</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-accent shrink-0" size={20} />
-                <span>info@simplysolar.com</span>
+                <span>info@simplysolar.com.ng</span>
               </li>
             </ul>
           </div>

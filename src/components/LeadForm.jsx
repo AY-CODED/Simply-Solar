@@ -20,7 +20,7 @@ const LeadForm = () => {
     if (!formData.fullName.trim()) newErrors.fullName = 'Name is required';
     if (!formData.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) newErrors.email = 'Invalid email address';
     if (!formData.phone.match(/^\d{10,15}$/)) newErrors.phone = 'Valid phone number required';
-    if (!formData.zipCode.match(/^\d{5}$/)) newErrors.zipCode = 'Invalid ZIP code';
+    if (!formData.zipCode.trim()) newErrors.zipCode = 'City/State is required';
     if (!formData.monthlyBill) newErrors.monthlyBill = 'Please select your bill';
     return newErrors;
   };
@@ -150,14 +150,14 @@ const LeadForm = () => {
                   {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">ZIP Code</label>
+                  <label className="block text-sm font-bold text-slate-700 mb-2">City / State</label>
                   <input
                     type="text"
                     name="zipCode"
                     value={formData.zipCode}
                     onChange={handleChange}
                     className={`w-full px-4 py-3 rounded-xl border ${errors.zipCode ? 'border-red-500' : 'border-slate-200'} focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all`}
-                    placeholder="90210"
+                    placeholder="Lagos, Nigeria"
                   />
                   {errors.zipCode && <p className="text-red-500 text-xs mt-1">{errors.zipCode}</p>}
                 </div>
@@ -173,11 +173,11 @@ const LeadForm = () => {
                   style={{backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'currentColor\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M19 9l-7 7-7-7\'/%3E%3C/svg%3E")', backgroundSize: '1.2em'}}
                 >
                   <option value="">Select your bill amount</option>
-                  <option value="0-100">$0 - $100</option>
-                  <option value="101-200">$101 - $200</option>
-                  <option value="201-300">$201 - $300</option>
-                  <option value="301-500">$301 - $500</option>
-                  <option value="501+">$501+</option>
+                  <option value="0-20k">₦0 - ₦20,000</option>
+                  <option value="20k-50k">₦20,001 - ₦50,000</option>
+                  <option value="50k-100k">₦50,001 - ₦100,000</option>
+                  <option value="100k-250k">₦100,001 - ₦250,000</option>
+                  <option value="250k+">₦250,001+</option>
                 </select>
                 {errors.monthlyBill && <p className="text-red-500 text-xs mt-1">{errors.monthlyBill}</p>}
               </div>

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { DollarSign, TrendingDown, PiggyBank } from 'lucide-react';
+import { Banknote, TrendingDown, PiggyBank } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const SavingsCalculator = () => {
-  const [bill, setBill] = useState(200);
+  const [bill, setBill] = useState(50000);
 
   const annualSavings = Math.round((bill * 12) * 0.70);
   const twentyYearSavings = annualSavings * 20;
@@ -33,20 +33,20 @@ const SavingsCalculator = () => {
                     <label className="text-sm font-bold uppercase tracking-wider text-slate-400">
                       Average Monthly Bill
                     </label>
-                    <span className="text-4xl font-extrabold text-primary">${bill}</span>
+                    <span className="text-4xl font-extrabold text-primary">₦{bill.toLocaleString()}</span>
                   </div>
                   <input
                     type="range"
-                    min="50"
-                    max="1000"
-                    step="10"
+                    min="10000"
+                    max="500000"
+                    step="5000"
                     value={bill}
                     onChange={(e) => setBill(parseInt(e.target.value))}
                     className="w-full h-3 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-accent"
                   />
                   <div className="flex justify-between mt-2 text-sm text-slate-400 font-medium">
-                    <span>$50</span>
-                    <span>$1,000</span>
+                    <span>₦10,000</span>
+                    <span>₦500,000</span>
                   </div>
                 </div>
 
@@ -75,7 +75,7 @@ const SavingsCalculator = () => {
                   >
                     <p className="text-blue-200 uppercase tracking-widest text-sm font-bold mb-2">Estimated Annual Savings</p>
                     <div className="flex items-start">
-                      <span className="text-2xl mt-1 mr-1 font-bold text-accent">$</span>
+                      <span className="text-2xl mt-1 mr-1 font-bold text-accent">₦</span>
                       <span className="text-6xl md:text-7xl font-extrabold">{annualSavings.toLocaleString()}</span>
                     </div>
                   </motion.div>
@@ -98,7 +98,7 @@ const SavingsCalculator = () => {
                     <div>
                       <p className="text-blue-200 text-sm font-bold uppercase tracking-widest mb-1">20-Year Total Savings</p>
                       <p className="text-4xl font-extrabold text-accent">
-                        ${twentyYearSavings.toLocaleString()}
+                        ₦{twentyYearSavings.toLocaleString()}
                       </p>
                     </div>
                   </motion.div>
